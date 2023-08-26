@@ -18,15 +18,15 @@ public class Main {
         WebDriver driver = new ChromeDriver();
 
         /*Forwarding validation*/
-        GooglePage googlePage = new GooglePage(driver, urlGoogle);
+        GooglePage googlePage = new GooglePage(driver, URL_GOOGLE);
         googlePage.ForwardingValidation();
 
         /*Dropdown test*/
-        Dropdowns dropdowns = new Dropdowns(driver, urlForDropdowns);
+        Dropdowns dropdowns = new Dropdowns(driver, URL_DROPDOWNS);
         dropdowns.CheckDropdown();
 
         /*Sending keys test*/
-        YoutubePage youtubePage = new YoutubePage(driver, urlYoutube);
+        YoutubePage youtubePage = new YoutubePage(driver, URL_YOUTUBE);
         youtubePage.VideoSearching();
 
         driver.close();
