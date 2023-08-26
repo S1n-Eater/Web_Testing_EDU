@@ -13,4 +13,5 @@ public class PageObject{
     public void Open(String url){
         driver.get(url);
     }
+    public void Forwarding(String url){driver.navigate().to(url);}
 }

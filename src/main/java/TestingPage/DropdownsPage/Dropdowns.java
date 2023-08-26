@@ -3,6 +3,7 @@ package TestingPage.DropdownsPage;
 import TestingPage.PageObject.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class Dropdowns extends PageObject {
@@ -17,4 +18,21 @@ public class Dropdowns extends PageObject {
         selectDropdown.selectByValue("JPN");
     }
 
+    public void CheckDropdownWithoutSelector(String forwardingUrl) throws InterruptedException {
+        int selectCounter = 1;
+        super.Forwarding(forwardingUrl);
+
+        System.out.println("Number of adults before the test: " + selectCounter);
+
+        driver.findElement(By.xpath("//*[@id=\'main-container\']/div/div[1]/div[3]/div[2]/div[5]/div[1]/div/div")).click();
+        Thread.sleep(2000l);
+
+        while(selectCounter<5){
+            driver.findElement(By.xpath("//*[@id=\'main-container\']/div/div[1]/div[3]/div[2]/div[5]/div[1]/div/div[2]/div[2]/div/div[1]/div[1]/div[2]/div[3]")).click();
+            selectCounter++;
+        }
+        driver.findElement(By.xpath("//*[@id=\'main-container\']/div/div[1]/div[3]/div[2]/div[5]/div[1]/div/div[2]/div[2]/div/div[2]/div")).click();
+
+        System.out.println("Number of adults after the test: " + selectCounter);
+    }
 }
