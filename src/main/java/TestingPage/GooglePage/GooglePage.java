@@ -3,7 +3,7 @@ package TestingPage.GooglePage;
 import TestingPage.PageObject.PageObject;
 import org.openqa.selenium.WebDriver;
 
-import static Constants.Constants.Urls.urlGoogle;
+import static Constants.Constants.Urls.URL_GOOGLE;
 
 public class GooglePage extends PageObject{
     public GooglePage (WebDriver driver, String url){
@@ -16,7 +16,7 @@ public class GooglePage extends PageObject{
 
         String checkingUrl = driver.getCurrentUrl();
 
-        if (urlGoogle.equals(checkingUrl)){System.out.println("Page isn't hacked");}
+        if (URL_GOOGLE.equals(checkingUrl)){System.out.println("Page isn't hacked");}
         else {System.out.println("Page is hacked" + "\n" + checkingUrl);}
     }
 
