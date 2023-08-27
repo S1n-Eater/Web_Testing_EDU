@@ -11,7 +11,10 @@ public class PageObject{
     }
 
     public void Open(String url){
+        driver.manage().window().maximize();
         driver.get(url);
     }
-    public void Forwarding(String url){driver.navigate().to(url);}
+    public void Forwarding(String url){
+        driver.navigate().to(url);
+    }
 }

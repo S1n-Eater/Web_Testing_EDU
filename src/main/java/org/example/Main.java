@@ -30,6 +30,7 @@ public class Main {
         YoutubePage youtubePage = new YoutubePage(driver, URL_YOUTUBE);
         youtubePage.VideoSearching();
 
+
         driver.close();
         driver.quit();
     }

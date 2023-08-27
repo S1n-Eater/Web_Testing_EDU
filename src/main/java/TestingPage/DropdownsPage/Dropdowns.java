@@ -32,6 +32,11 @@ public class Dropdowns extends PageObject {
         }
         driver.findElement(By.xpath("//*[@id=\'main-container\']/div/div[1]/div[3]/div[2]/div[5]/div[1]/div/div[2]/div[2]/div/div[2]/div")).click();
 
-        System.out.println("Number of adults after the test: " + selectCounter);
+        System.out.println("Number of adults after the test: " + driver.findElement(By.xpath("//div[@class=\'css-1dbjc4n r-1kz6sp\'][1]")).getText());
+
+        if(driver.findElement(By.xpath("//div[@class=\'css-1dbjc4n r-1kz6sp\'][1]")).getText().equals(Integer.toString(selectCounter))){
+            System.out.println("Number of people is correct" + "\t\t|\t\t"+"Test - PASSED");
+        }
+        else {System.out.println("Number of people isn't correct" + "\tTest - FAILED");}
     }
 }
