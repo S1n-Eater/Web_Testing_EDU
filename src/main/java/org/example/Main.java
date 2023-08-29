@@ -25,6 +25,7 @@ public class Main {
         Dropdowns dropdowns = new Dropdowns(driver, URL_DROPDOWNS);
         dropdowns.CheckDropdown();
         dropdowns.CheckDropdownWithoutSelector(URL_DROPDOWNS_WITHOUT_SELECTOR);
+        dropdowns.AutoSuggestiveDropdowns(URL_MAKE_MY_TRIP_FLIGHTS);
 
         /*Sending keys test*/
         YoutubePage youtubePage = new YoutubePage(driver, URL_YOUTUBE);

@@ -2,7 +2,9 @@ package TestingPage.DropdownsPage;
 
 import TestingPage.PageObject.PageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class Dropdowns extends PageObject {
@@ -38,5 +40,36 @@ public class Dropdowns extends PageObject {
             System.out.println("Number of people is correct" + "\t\t|\t\t"+"Test - PASSED");
         }
         else {System.out.println("Number of people isn't correct" + "\tTest - FAILED");}
+    }
+
+    public void AutoSuggestiveDropdowns(String forwardingUrl) throws InterruptedException {
+        int optionCounter = 0;
+
+        super.Forwarding(forwardingUrl);
+
+        driver.navigate().refresh();
+
+        Thread.sleep(5000l);
+        driver.findElement(By.xpath("//label[@for='fromCity']")).click();;
+        WebElement source = driver.findElement(By.xpath("//input[@placeholder=\'From\']"));
+        source.clear();
+        source.sendKeys("MUM");
+        Thread.sleep(2000l);
+        source.sendKeys(Keys.ARROW_DOWN);
+        Thread.sleep(2000l);
+        source.sendKeys(Keys.ENTER);
+
+        driver.findElement(By.xpath("//label[@for='toCity']")).click();;
+        WebElement destination = driver.findElement(By.xpath("//input[@placeholder='To']"));
+        destination.clear();
+        destination.sendKeys("DEL");
+        Thread.sleep(2000l);
+        while(optionCounter < 4){
+            destination.sendKeys(Keys.ARROW_DOWN);
+            optionCounter++;
+        }
+        destination.sendKeys(Keys.ENTER);
+
+        System.out.println("\n" + driver.findElement(By.xpath("//label[@for='toCity']")).getText());
     }
 }
