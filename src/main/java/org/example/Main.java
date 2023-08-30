@@ -1,5 +1,6 @@
 package org.example;
 
+import TestingPage.CheckboxesPage.CheckboxesPage;
 import TestingPage.DropdownsPage.Dropdowns;
 import TestingPage.GooglePage.GooglePage;
 import TestingPage.YoutubePage.YoutubePage;
@@ -31,6 +32,9 @@ public class Main {
         YoutubePage youtubePage = new YoutubePage(driver, URL_YOUTUBE);
         youtubePage.VideoSearching();
 
+        /*Checkboxes test*/
+        CheckboxesPage checkboxesPage = new CheckboxesPage(driver, URL_CHECKBOXES_TESTING_WEBSITE);
+        checkboxesPage.Ceckboxestest();
 
         driver.close();
         driver.quit();
