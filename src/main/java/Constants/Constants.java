@@ -10,5 +10,6 @@ public class Constants {
         public static final String URL_YOUTUBE = "https://www.youtube.com/";
         public static final String URL_MAKE_MY_TRIP_FLIGHTS = "https://www.makemytrip.com/flights/";
         public static final String URL_CHECKBOXES_TESTING_WEBSITE = "https://faculty.washington.edu/chudler/java/boxes.html";
+        public static final String URL_IS_ENABLE_ELEMENT_TEST = "https://www.spicejet.com/";
     }
 }
