@@ -19,29 +19,29 @@ public class Main {
 
         WebDriver driver = new ChromeDriver();
 
-//        /*Forwarding validation*/
-//        GooglePage googlePage = new GooglePage(driver, URL_GOOGLE);
-//        googlePage.ForwardingValidation();
-//
-//        /*Dropdown test*/
-//        Dropdowns dropdowns = new Dropdowns(driver, URL_DROPDOWNS);
-//        dropdowns.CheckDropdown();
-//        dropdowns.CheckDropdownWithoutSelector(URL_DROPDOWNS_WITHOUT_SELECTOR);
-//        dropdowns.AutoSuggestiveDropdowns(URL_MAKE_MY_TRIP_FLIGHTS);
-//
-//        /*Sending keys test*/
-//        YoutubePage youtubePage = new YoutubePage(driver, URL_YOUTUBE);
-//        youtubePage.VideoSearching();
-//
-//        /*Checkboxes test*/
-//        CheckboxesPage checkboxesPage = new CheckboxesPage(driver, URL_CHECKBOXES_TESTING_WEBSITE);
-//        checkboxesPage.Ceckboxestest();
+        /*Forwarding validation*/
+        GooglePage googlePage = new GooglePage(driver, URL_GOOGLE);
+        googlePage.ForwardingValidation();
+
+        /*Dropdown test*/
+        Dropdowns dropdowns = new Dropdowns(driver, URL_DROPDOWNS);
+        dropdowns.CheckDropdown();
+        dropdowns.CheckDropdownWithoutSelector(URL_DROPDOWNS_WITHOUT_SELECTOR);
+        dropdowns.AutoSuggestiveDropdowns(URL_MAKE_MY_TRIP_FLIGHTS);
+
+        /*Sending keys test*/
+        YoutubePage youtubePage = new YoutubePage(driver, URL_YOUTUBE);
+        youtubePage.VideoSearching();
+
+        /*Checkboxes test*/
+        CheckboxesPage checkboxesPage = new CheckboxesPage(driver, URL_CHECKBOXES_TESTING_WEBSITE);
+        checkboxesPage.Ceckboxestest();
 
         /*Element enabled test*/
         IsEnablePage isEnablePage = new IsEnablePage(driver, URL_IS_ENABLE_ELEMENT_TEST);
         isEnablePage.CheckIsEnableElement();
 
-//        driver.close();
-//        driver.quit();
+        driver.close();
+        driver.quit();
     }
 }
