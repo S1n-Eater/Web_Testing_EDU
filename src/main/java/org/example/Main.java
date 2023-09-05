@@ -1,5 +1,6 @@
 package org.example;
 
+import TestingPage.AlertsTestingPage.AlertsTestingPage;
 import TestingPage.CheckboxesPage.CheckboxesPage;
 import TestingPage.DropdownsPage.Dropdowns;
 import TestingPage.GooglePage.GooglePage;
@@ -40,6 +41,10 @@ public class Main {
         /*Element enabled test*/
         IsEnablePage isEnablePage = new IsEnablePage(driver, URL_IS_ENABLE_ELEMENT_TEST);
         isEnablePage.CheckIsEnableElement();
+
+        /*Alerts test*/
+        AlertsTestingPage alertsTestingPage = new AlertsTestingPage(driver, URL_ALERTS_TESTING_PAGE);
+        alertsTestingPage.AlertsTest();
 
         driver.close();
         driver.quit();
