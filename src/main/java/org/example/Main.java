@@ -6,8 +6,7 @@ import TestingPage.DropdownsPage.Dropdowns;
 import TestingPage.GooglePage.GooglePage;
 import TestingPage.IsEnablePage.IsEnablePage;
 import TestingPage.YoutubePage.YoutubePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 
 import java.io.IOException;
 import java.util.Scanner;
