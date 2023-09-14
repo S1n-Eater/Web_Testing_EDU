@@ -12,5 +12,6 @@ public class Constants {
         public static final String URL_CHECKBOXES_TESTING_WEBSITE = "https://faculty.washington.edu/chudler/java/boxes.html";
         public static final String URL_IS_ENABLE_ELEMENT_TEST = "https://www.spicejet.com/";
         public static final String URL_ALERTS_TESTING_PAGE = "https://demo.automationtesting.in/Alerts.html";
+        public static final String URL_ADD_PRODUCTS_IN_CART = "https://rahulshettyacademy.com/seleniumPractise/#/";
     }
 }

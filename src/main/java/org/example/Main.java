@@ -1,5 +1,6 @@
 package org.example;
 
+import TestingPage.AddProductsInCartPage.AddProductsInCartPage;
 import TestingPage.AlertsTestingPage.AlertsTestingPage;
 import TestingPage.CheckboxesPage.CheckboxesPage;
 import TestingPage.DropdownsPage.Dropdowns;
@@ -23,7 +24,7 @@ public class Main {
         int testNumber;
         WebdriverManager webdriverManager = new WebdriverManager();
 
-        System.out.println("________________________________________________________________\n" + "Test list:\n" + "\n1)Forwarding validation;\n2)Dropdown test;\n3)Sending keys test;\n4)Checkboxes test;\n5)Element enabled test;\n6)Alerts test" + "\n________________________________________________________________\n");
+        System.out.println("________________________________________________________________\n" + "Test list:\n" + "\n1)Forwarding validation;\n2)Dropdown test;\n3)Sending keys test;\n4)Checkboxes test;\n5)Element enabled test;\n6)Alerts test;\n7)Adding products in cart Test" + "\n________________________________________________________________\n");
 
         System.out.println("\n\nWrite the number of test");
         testNumber = in.nextInt();
@@ -82,6 +83,15 @@ public class Main {
 
                 AlertsTestingPage alertsTestingPage = new AlertsTestingPage(driver, URL_ALERTS_TESTING_PAGE);
                 alertsTestingPage.AlertsTest();
+
+                webdriverManager.WebdriverCloseAndQuit();
+                break;
+
+            case 7:     /*Adding products in cart Test*/
+                webdriverManager.WebdriverConnection();
+
+                AddProductsInCartPage addProductsInCartPage = new AddProductsInCartPage(driver, URL_ADD_PRODUCTS_IN_CART);
+                addProductsInCartPage.AddArrayofProductsToCurtTest();
 
                 webdriverManager.WebdriverCloseAndQuit();
                 break;
