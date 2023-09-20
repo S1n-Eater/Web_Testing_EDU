@@ -32,14 +32,13 @@ public class AddProductsInCartPage extends PageObject {
             String[] name = products.get(i).getText().split("-");
             String formattedName = name[0].trim();
 
-            Thread.sleep(1000);
             if (productsNeededList.contains(formattedName)){
                 counter++;
 
-                driver.findElements(By.xpath("//button[text() = 'ADD TO CART']")).get(i).click();
+                driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();
                 cartValue = Integer.valueOf(driver.findElement(By.xpath("//div[@class='cart-info']//tr[1]//strong")).getText());
 
-                if(counter==3){break;}
+                if(counter==productsNeeded.length){break;}
             }
         }
 
