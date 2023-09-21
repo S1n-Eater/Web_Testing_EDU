@@ -92,6 +92,7 @@ public class Main {
 
                 AddProductsInCartPage addProductsInCartPage = new AddProductsInCartPage(driver, URL_ADD_PRODUCTS_IN_CART);
                 addProductsInCartPage.AddArrayofProductsToCurtTest();
+                addProductsInCartPage.CheckPromoCodeIsValidTest();
 
                 webdriverManager.WebdriverCloseAndQuit();
                 break;

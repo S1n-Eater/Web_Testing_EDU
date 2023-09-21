@@ -54,4 +54,10 @@ public class AddProductsInCartPage extends PageObject {
             Assert.assertTrue(false);
         }
     }
+
+    public void CheckPromoCodeIsValidTest(){
+
+        driver.findElement(By.xpath("//div[@class='cart']//img[@alt='Cart']")).click();
+        driver.findElement(By.xpath("//div[@class='action-block']//button[text() = 'PROCEED TO CHECKOUT']")).click();
+    }
 }
